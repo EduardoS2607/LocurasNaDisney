@@ -11,7 +11,7 @@ function nextChallenge(){
 }
 
 let sorteados = [];
-let valorMaximo = 1;
+let valorMaximo = 10;
 
 function criarUnico() {
 if (sorteados.length == valorMaximo)sorteados = []
