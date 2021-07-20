@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loucuras na Disney</title>
+    <link rel="icon" type="image/png" href="media/img/favicon.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="app.css">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="media/img/logo.png" id="img-logo"> -->
+        <div class="jumbotron">
+            <div class="conteudo conteudo-0">
+                <button type="button" class="btn btn-warning btn-next btn-lg" onclick="nextChallenge()">Iniciar jogo</button>
+            </div>
+            <div class="conteudo conteudo-1 hide">
+                <p class="title-desafio">Inimigo da moda</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Quem está vestindo a pior roupa da sala?</h6>
+                </div>
+                <img src="media/img/mitico.png" class="icone">
+                <p class="texto-castigo">O pior bebe</p>
+                <p> <b>1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next btn-lg" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-2 hide">
+                <p class="title-desafio">Velozes e Furiosos</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Ande de quatro imitando um carro!</h6>
+                </div>
+                <img src="media/img/carro.png" class="icone">
+                <p class="texto-castigo">Vai descumprir?</b></p>
+                <p> <b>Tome 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-3 hide">
+                <p class="title-desafio">Medusa</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Ninguém pode fazer contato visual com você, o primeiro a ser pego BEBE!</h6>
+                </div>
+                <img src="media/img/medusa.png" class="icone">
+                <p class="texto-castigo">Olha pra mim</b></p>
+                <p> <b>E tome 1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-4 hide">
+                <p class="title-desafio">Web Bullying </p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Deixei seu celular desbloqueado por 45 segundos na mão da pessoa a sua esquerda</h6>
+                </div>
+                <img src="media/img/mauricio.png" class="icone">
+                <p class="texto-castigo">Não vai deixar?</b></p>
+                <p> <b>Tome 3 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-5 hide">
+                <p class="title-desafio">Desafio em Grupo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Todas as mulheres bebem!</h6>
+                </div>
+                <img src="media/img/ines.png" class="icone">
+                <p class="texto-castigo">Se reclamar</b></p>
+                <p> <b>Bebe 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-6 hide">
+                <p class="title-desafio">Desafio em Grupo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Todas os homens bebem!</h6>
+                </div>
+                <img src="media/img/john-travolta.png" class="icone">
+                <p class="texto-castigo">Se reclamar</b></p>
+                <p> <b>Bebe 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-7 hide">
+                <p class="title-desafio">Exame do pezinho</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Beije o pé da pessoa a sua direita!</h6>
+                </div>
+                <img src="media/img/pe.png" class="icone">
+                <p class="texto-castigo">Não vai fazer</b></p>
+                <p> <b>Tome 1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-8 hide">
+                <p class="title-desafio">O Blogueirinho</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Beba uma dose pra cada stories que postou nas últimas 24 horas...</h6>
+                </div>
+                <img src="media/img/blogueiro.png" class="icone">
+                <p class="texto-castigo">Sem choro</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-9 hide">
+                <p class="title-desafio">Friends Forever</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Escolha alguém pra tomar o mesmo número de doses que você por 3 rodadas</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Meu amiguinho</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-10 hide">
+                <p class="title-desafio">Palhaço</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Conte 1 piada. Quem rir bebê 1 dose, se ninguém rir você bebe 2 doses</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo"></b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-11 hide">
+                <p class="title-desafio">Tanquinho</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">20 abdominais agora</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não vai fazer?</b></p>
+                <p> <b>Tome 1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-12 hide">
+                <p class="title-desafio">O mestre mandou</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Faça algo que todos deverão repetir</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Alguém nao fez?</b></p>
+                <p> <b>Tome 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-13 hide">
+                <p class="title-desafio">Dublador</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Com a voz de um dublador da discovery channel, narre uma cena erótica entre dois jogadores</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Se não fazer</b></p>
+                <p> <b>Tome 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-14 hide">
+                <p class="title-desafio">Baby transante</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Todos devem chutar com quantos anos você perdeu a virgindade, a quantidade de pessoas que acertar, será o número de doses que você deverá tomar</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Essa eu quero saber</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-15 hide">
+                <p class="title-desafio">Seven Things</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Cite 7 coisas da sua vida que a maioria não sabia. Cada item não contado é uma dose</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">To curioso</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-16 hide">
+                <p class="title-desafio">Imunidade</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Você está livre de bebidas por 3 rodadas</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Se livrou agora</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-17 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Qual parte do corpo você depila?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">O povo quer saber</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-18 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Qual foi a última vez que viu um pornô?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Hmm</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-19 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Já mandou nudes?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Danado(a)</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-20 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Qual lugar mais inusitado que você transou?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Eitaa</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-21 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Já deu um selinho em alguém do mesmo sexo?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Quem nunca?</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-22 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">A sala está pegando fogo, quem você salvaria primeiro(não vale seu parceiro(a))</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Hora da verdade</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-23 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Se arrepende de ter ficado com alguém?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Aquele ex...</b></p>
+                <!-- <p> <b>Tome 2 doses</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-24 hide">
+                <p class="title-desafio">Perguntinhas embaraçosas</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Quem é o mais pão duro do grupo?</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Se não souber</b></p>
+                <p> <b>É VOCÊ</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-25 hide">
+                <p class="title-desafio">Cirrose</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Derrube sua bebida no seu colo!</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não quer se sujar?</b></p>
+                <p> <b>Tome a dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-26 hide">
+                <p class="title-desafio">Desafio em grupo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Quem tá com vermelho na roupa bebe!</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Quer chamar boi?</b></p>
+                <!-- <p> <b>Tome a dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-27 hide">
+                <p class="title-desafio">Desafio em grupo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Quem o grupo achar o mais bonito(a) da roda bebe 1 dose</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">O peso da beleza</b></p>
+                <!-- <p> <b>Tome a dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-28 hide">
+                <p class="title-desafio">Desafio em grupo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Os desempregados bebem, a vida é dura</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">meu marido tem 3 empregos</b></p>
+                <!-- <p> <b>Tome a dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-29 hide">
+                <p class="title-desafio">Desafio em grupo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Cantem uma música de sofrência em coro</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Ai que saudade do meu ex</b></p>
+                <!-- <p> <b>Tome a dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-30 hide">
+                <p class="title-desafio">Ator de Hollywood</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Interprete a famosa cena do titânic com o jogador a sua esquerda </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não vão fazer</b></p>
+                <p> <b>Tome 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-31 hide">
+                <p class="title-desafio">Trote sensual</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Ligue pra alguém da sua agenda e passe um trote sensual </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não vai fazer?</b></p>
+                <p> <b>Tome 1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-32 hide">
+                <p class="title-desafio">Oi Mãe</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Ligue para sua mãe e diga que você se cadastrou para participar do próximo the voice!</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não vai fazer?</b></p>
+                <p> <b>Tome 2 doses</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-33 hide">
+                <p class="title-desafio">Copo amigo</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Deixe alguém jogar um copo de água na sua cara</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Se não deixar</b></p>
+                <p> <b>Tome 1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-34 hide">
+                <p class="title-desafio">A festa do ano</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Quem nunca foi na cirrose fest bebe</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não é possivel</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-35 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Dei PT</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Eu já</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-36 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fiz xixi na piscina </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Nem um pouquinho?</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-37 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Dormi pelado</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Sensação de liberdade</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-38 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fiz menage</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Estão perdendo</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-39 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fiquei com alguém por pena</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Ah, aquela pessoa</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-40 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Chorei bebado</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Quem nunca?</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-41 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Levei um fora em público </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Putz...</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-42 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Tive um apelido zoado</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">O trakinas</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-43 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Liguei pra ex, enquanto estava bebado</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">E quando vem as recaída</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-44 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fui corno </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Só não sabe</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-45 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Me declarei pra alguém </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Wnnt</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-46 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fui em um motel</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Então vá, agora!</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-47 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Transei na cama da mãe ou sogra</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Melhor cama possivel</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-48 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fumei cigarro</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Nem o do verde?</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-49 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Transei no chão </h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">A dor nas costelas, vem!</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-50 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Tomei submarino</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Que tal agora?</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-51 hide">
+                <p class="title-desafio">Eu nunca</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Fui pego transando</h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">E o desespero meu pai!</b></p>
+                <!-- <p> <b>Tome 1 dose</b></p> -->
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+            <div class="conteudo conteudo-52 hide">
+                <p class="title-desafio">Século XXI</p>
+                <div class="texto-descricao">
+                    <h6 class="description-desafio">Deixe alguém escrever “aberto a novas experiências no seu cóccix”/h6>
+                </div>
+                <img src="media/img/icone.png" class="icone">
+                <p class="texto-castigo">Não vai deixar</b></p>
+                <p> <b>Tome 1 dose</b></p>
+                <button type="button" class="btn btn-warning btn-next" onclick="nextChallenge()">Próximo</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
