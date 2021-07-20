@@ -13,6 +13,7 @@ body{
 
 p{
     margin: 0;
+    font-size: 22px;
 }
 
 b{
@@ -79,6 +80,7 @@ b{
 
 .texto-castigo{
     margin-top: 73px;
+    font-size: 22px;
 }
 
 .texto-descricao{
