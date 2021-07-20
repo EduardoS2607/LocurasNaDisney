@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url('media/img/fundo-celular-menor.jpeg'), url(https://psycatgames.com/app/never-have-i-ever/img/confetti.svg);
+    background-image: url('media/img/fundo-celular-menor.jpg'), url(https://psycatgames.com/app/never-have-i-ever/img/confetti.svg);
     background-size: 47em;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: .1rem;
